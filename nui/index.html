@@ -1,0 +1,388 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <link
+    rel="stylesheet"
+    href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-solid.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-regular.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-light.css"
+  >
+<link href="https://fonts.googleapis.com/css?family=Tajawal:700&display=swap&subset=arabic" rel="stylesheet">
+
+<style>
+  .fullscreen {
+    width: 100%;
+    height: 100vh;
+    /* background: linear-gradient(180deg, rgba(0, 0, 0, 0.62) 0%, rgba(0, 0, 0, 0.00) 50%), linear-gradient(270deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.00) 50%, #00000000 50%), linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.00) 50%); */
+    
+    filter: blur(0px);
+  -webkit-filter: blur(0px);
+  
+  /* Full height */
+  height: 100%; 
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+    background: none;
+    position: relative  ;
+    z-index: -1;
+  }
+</style>
+  </head>
+  <body>
+
+
+    
+    <div class="fullscreen">
+      
+    </div>
+    <div id="fuck">
+    
+      <div class="contstart " >
+
+        
+        <button class="play" id="play-game"><p>Start</p></button> <!--زر البدايه-->
+        
+        <button class="falseplayred"><i class="fa-regular fa-xmark-large"></i></button>
+        
+        </div>
+        
+            <!--بدايه اسئله-->
+        
+        <div class="name"><p>Name</p></div>
+        
+        <div class="brith"><p>Brith Date</p></div>
+        <div class="malefeamale"><p>Gender</p></div>
+        <div class="natinioly"><p>Nationality</p></div>
+        <div class="job"><p>Job</p></div>
+        <div class="cash"><p>Cash</p></div>
+        <div class="bank"><p>Bank</p></div>
+        <!--نهايه اسئله-->
+        <div class="borderslots"></div>
+        
+    <style>
+          #serverlogo{
+          position: absolute;
+          left: 55.2%;
+          top: 35.8%;
+          width: 25%;
+          height: auto;
+      }
+    </style>     
+    <!--بدايه اجوبه-->
+        
+            <div class="fuckname" ><p  id="name">Ahmad </p> <span style="margin-left: 5px ;" id="surname"></span></div>
+            <div class="fuckbrith" id="birthdate"><p>2020/7/12</p></div>
+            <div class="fuckmalefeamale" id="fucksex"><p>ذكر</p></div>
+            <div class="fucknatinioly" id="location"><p>سعوديه</p></div>
+            <div class="fuckjob" id="job"><p>الشرطه</p></div>
+            <div class="fuckcash" id="money"><p>4320$</p></div>
+            <div class="fuckbank" id="fuckbk"><p>4500$</p></div>
+    </div>
+    
+  </div>
+    <div class="tebex-integration" style="display: none">
+      <div class="header-of-tebex">
+        <!-- <h1>Tebex Transaction Code</h1> -->
+        <p>
+          Enter your transaction code, lorem ipsum simply dummy text. <br />
+          &nbsp;<span style="text-align: center; color: rgba(174, 227, 63, 1)"
+            >(Press escape for exit.)</span
+          >
+        </p>
+      </div>
+      <input
+        type="text"
+        placeholder="tbx-23dasd230ad23292jsda"
+        name="tebex-code"
+      />
+      <button class="confirm-buying">Confirm</button>
+    </div>
+    <div class="delete-confirmation" style="display: none">
+      <div class="header-of-input">
+        <h1>Character deletion</h1>
+        <p>
+          Are you sure you want too delete this character ?<br />
+          &nbsp;<span style="text-align: center; color: rgb(214, 13, 13)"
+            >(This action is irreversible.)</span
+          >
+        </p>
+      </div>
+      <!-- <button class="confirm-delete">Accept</button> -->
+      <!-- <button class="cancel-delete">Decline</button> -->
+    </div>
+    <div class="character-slot-contain">
+      <!-- <div class="char-slot" data-status="created">
+            <img src="assets/person.png" alt="">
+        </div>
+        <div class="char-slot" data-status="available">
+            <img src="assets/availableperson.png" alt="">
+        </div>
+        <div class="char-slot" data-status="none">
+            <img src="assets/one.png" alt="">
+        </div>
+        <div class="char-slot" data-status="none">
+            <img src="assets/one.png" alt="">
+        </div> -->
+    </div>
+    <div class="spawn-ui-contain" style="display: none">
+      <div class="header-spawn">
+        <h1>Choose</h1>
+        <p>Spawn point</p>
+      </div>
+
+      <div class="spawn-#c2c2c2s-list">
+       
+      </div>
+      <div class="join-btn" id="spawn-play">
+        Spawn
+        <div class="border-circles">
+          <div class="main-border-circle">
+            <div class="mid-border-circle">
+              <div class="small-border-circle">
+                <img src="assets/join-man.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="main-contain" style="display: none">
+      <div class="player-name-contain">
+        <h1 id="name">Mike</h1>
+        <p id="surname">Wazovski</p>
+      </div> -->
+      <!-- <div class="character-information-panel">
+        <div class="char-info">
+          <div class="char-info-header loc">Location</div>
+          <div class="char-info-description">
+            <span id="location">Turkey</span>
+            <img src="assets/location.png" alt="" />
+          </div>
+        </div>
+        <div class="char-info">
+          <div class="char-info-header bd">Birthday</div>
+          <div class="char-info-description">
+            <span id="birthdate">17, June</span
+            ><img src="assets/birthday.png" alt="" />
+          </div>
+        </div>
+        <div class="char-info">
+          <div class="char-info-header job">Job</div>
+          <div class="char-info-description">
+            <span id="job">Police</span>
+            <img src="assets/job.png" alt="" />
+          </div>
+        </div>
+        <div class="char-info">
+          <div class="char-info-header money">Money</div>
+          <div class="char-info-description">
+            <span id="money">12.033</span>$
+            <img src="assets/money.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="buttons-actions-play-delete">
+        <div class="join-btn" id="play-game">
+          JOIN
+          <div class="border-circles">
+            <div class="main-border-circle">
+              <div class="mid-border-circle">
+                <div class="small-border-circle">
+                  <img src="assets/join-man.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="join-btn" id="delete-char">
+          Delete Char
+          <img src="assets/delete-svgrepo-com.svg" alt="" style="width: 3vh" />
+        </div>
+      </div>
+    </div> 
+   
+          <!-نهايه اجوبه-->
+   
+
+      <!-- <div class="header-of-contain">
+        <h1>New <br /><span>Character</span></h1>
+        <p>Fill up the data required to create your character</p>
+      </div>
+      <div class="char-input-row">
+        <div class="char-input-main">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Naruto"
+            class="info-inp"
+          />
+          <img src="assets/inputperson.png" alt="" />
+        </div>
+        <div class="char-input-main">
+          <label for="surname">Lastname</label>
+          <input
+            type="text"
+            id="surname"
+            name="surname"
+            placeholder="Uzumaki"
+            class="info-inp"
+          />
+          <img src="assets/inputperson.png" alt="" />
+        </div>
+        <div class="char-input-main" id="nation-context">
+          <label for="location">Location</label>
+          <div class="location" id="contcreatecharcter">Nationality</div>
+          <img src="assets/arrow.png" alt="" />
+          <div class="context-menu" style="display: none">
+            <div class="search-by-name">
+              <input type="text" id="search-inp" placeholder="Search by name" />
+              <img
+                src="assets/search.png"
+                alt=""
+                style="left: 0; top: 0; position: relative"
+              />
+            </div>
+            <div class="places-row">
+            
+            </div>
+          </div>
+        </div>
+        <div class="char-input-main">
+        
+  
+        </div>
+        <div class="char-input-main">
+          <label for="birthdate">Birthday</label>
+          <input type="date" id="birthdate" name="birthdate" class="info-inp" />
+          <img src="assets/date.png" alt="" />
+        </div>
+        <div class="char-input-main">
+          <label for="gender">Gender</label>
+          <div class="gender">Select a gender</div>
+          <div class="gender-row">
+            <div class="female gn" data-selected="false" data-type="female">
+              <img
+                style="position: relative; top: 0; right: 0"
+                src="assets/male.png"
+                alt=""
+              />
+            </div>
+            <div class="male gn" data-selected="false" data-type="male">
+              <img
+                style="position: relative; top: 0; right: 0"
+                src="assets/female.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="join-btn" id="create-char">
+        <span class="create-new-char-text">CREATE NEW CHAR</span> <img src="assets/join-man.png" alt="" />
+        <div class="border-circles">
+          <div class="main-border-circle">
+            <div class="mid-border-circle">
+              <div class="small-border-circle"></div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+    <!-- <div class="create-char-contain" style="display: none"> -->
+      <div class="contcreatecharcter" id="contcreatecharcter" style="display: none;">
+
+
+
+        <button class="male gn" data-type="male" id="male"  data-selected="false"><i class="fa-solid fa-mars-stroke"></i><p>Male</p></button>
+        <button class="female gn" data-type="female" id="female"  data-selected="false"><i class="fa-solid fa-venus"></i><p>Female</p></button>
+        <p class="writedown">(Make sure you enter Realistic and correct data!)</p>
+
+        <span id="GetGender"></span>
+    <div class="createornot">
+
+        <button class="create" id="create-char">Create</button> <!--زر البدايه-->
+
+        
+        <button class="falsecreatered" id="return"><i class="fa-regular fa-xmark-large"></i></button>
+       
+        <div class="ifuckinFr">
+          <p>  First Name:</p>
+          <input class="information-input textbox" id="firstname" name='name' type="text " 
+          oninput="this.value=this.value.replace(/[^A-Za-z\u0600-\u06FF ]/g,'')" 
+          maxlength="14" 
+          onkeypress="return event.charCode !== 32 || event.charCode === 32" />
+           </div>
+    
+    
+    <div class="ifuckinLn">
+       <p>Last Name:</p>
+       <input class="" id="lastname" name='surname' type="text" 
+       oninput="this.value=this.value.replace(/[^A-Za-z\u0600-\u06FF ]/g,'').trim()" 
+       maxlength="14" 
+       onkeypress="return event.charCode === 32 || event.charCode !== 32 || this.selectionStart !== 0 && this.selectionEnd !== this.value.length" />
+
+    </div>
+</div>
+
+
+<div class="ifuckinNT">
+    <p>Nationality:</p>   
+    <input class="" name='fuckNt' id="Nationality" type="text" 
+    oninput="this.value=this.value.replace(/[^A-Za-z\u0600-\u06FF ]/g,'').trim()" 
+    maxlength="14" 
+    onkeypress="return event.charCode === 32 || event.charCode !== 32 || this.selectionStart !== 0 && this.selectionEnd !== this.value.length" />
+</div>
+
+        <div class="ifuckinBir">
+            <p>Brith Date:</p>   
+            <input type="date" class="information-birthdate" name="birthdate" id="birthdate " 
+            value="2023-12-31" min="1920-01-01" 
+            max="2023-12-31" />
+        </div>
+        <div class="imgintop"><img src="../nui/assets/png.png" id="imgintopcreate"></div>
+
+
+
+    
+    
+    
+    
+      </div> 
+
+
+    <!-- <div class="png"><img src="../nui/assets/png.png" alt=""></div> -->
+<!-- </div> -->
+  </body>
+</html>
+
+
+
+
