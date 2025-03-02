@@ -1,4 +1,4 @@
 
 
 
-https://discord.gg/devx
+https://discord.gg/devc
